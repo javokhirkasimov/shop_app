@@ -33,3 +33,4 @@ python manage.py runserver
 ## Dependencies
 * [Django](https://docs.djangoproject.com/en/4.1/)
 * [Django Rest Framework](https://www.django-rest-framework.org/)
+* [drf-yasg](https://drf-yasg.readthedocs.io/en/stable/)
