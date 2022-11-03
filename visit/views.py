@@ -1,4 +1,4 @@
-from rest_framework.views import APIView
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import CreateVisitSerializer, VisitSerializer
@@ -8,7 +8,7 @@ from .models import Visit
 # Create your views here.
 
 
-class CreateVisitView(APIView):
+class CreateVisitView(GenericAPIView):
     serializer_class = CreateVisitSerializer
 
     def post(self, request):

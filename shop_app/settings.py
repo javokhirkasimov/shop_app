@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "visit",
     # third-party packages
     "rest_framework",
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [

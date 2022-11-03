@@ -1,4 +1,4 @@
-from rest_framework.views import APIView
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import OutletSerializer
@@ -7,8 +7,9 @@ from .models import Outlet
 # Create your views here.
 
 
-class OutletListView(APIView):
+class OutletListView(GenericAPIView):
     serializer_class = PhoneNumberSerializer
+    queryset = Outlet.objects.all()
 
     def post(self, request):
         serializer = PhoneNumberSerializer(data=request.data)
